@@ -7,8 +7,16 @@
     
     <script>
      let button = document.getElementById("squeeze");
+     function getRandomInteger(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+}
      function shout(){
-	     alert("... and I squeak");
+         let articles = ["A","The"];
+         let adjectives = ["blue","red","quick","fast","big","small"];
+         let nouns = ["Dog","Cat","Car","Plane"];
+         let verbs = ["travelled","crashed","set off","fell"];
+         let adverbs = ["harshly","with speed","in style","with elegance"];
+	     alert(articles[getRandomInteger(0,articles.length -1)]+ " "+adjectives[getRandomInteger(0,adjectives.length -1)]+ " "+nouns[getRandomInteger(0,nouns.length -1)]+ " "+verbs[getRandomInteger(0,verbs.length -1)]+ " "+adverbs[getRandomInteger(0,adverbs.length -1)])
      }
      button.addEventListener("click", shout);
     </script>
